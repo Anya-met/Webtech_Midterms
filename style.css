@@ -12,7 +12,7 @@ body {
 
 header {
     align-items: center;
-    background-color: #E1B264;
+    background-color: #3e433e;
     display: flex;
     justify-content: space-between;
     left: 0;
@@ -43,7 +43,7 @@ nav ul li {
 }
 
 nav ul li:not(.selected-header-button):hover {
-    background-color: #BFE199;
+    background-color: #99e1e0;
 }
 
 .header-button {
@@ -54,7 +54,7 @@ nav ul li:not(.selected-header-button):hover {
 }
 
 .selected-header-button {
-    background-color: #A1C876;
+    background-color: #99e1e0;
 }
 
 footer {
@@ -83,7 +83,7 @@ main {
 }
 
 
-#ill-cook {
+#lutoniIdol {
     margin: -25px;
     width: 100%;
 }
@@ -485,7 +485,7 @@ nav#mobile-menu {
 
 
 .home-button:hover {
-    background-color: #A1C876;
+    background-color: #99e1e0;
 }
 
 nav ul {
