@@ -154,7 +154,7 @@ main {
 }
 
 .content-block {
-    background-color: white;
+    background: transparent;
     display: inline-block;
     margin: 20px;
     padding: 0px 20px;
@@ -189,7 +189,7 @@ main {
 }
 
 .ingredient:hover {
-    background-color: #BFE199;
+    background-color: burlywood;
     border-color: rgba(0, 0, 0, 0);
 }
 

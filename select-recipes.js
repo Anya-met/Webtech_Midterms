@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const data = {
     "foodCategories": [
         {
-            "categoryName": "Meat",
+            "categoryName": "MEAT",
             "items": ["Chicken Drumstick", "Cooked Chicken", "Pork Leg", "Pork Loin", "Bulk Pork Sausage", 
             "Round Beef Roast", "Beef Rump Roast", "Organic Beef", "Sausage Ravioli", "Beef Stir-fry Strips", 
             "Bacon", "Pork Tenderloin", "Ham Steak", "Baked Ham", "Pork Chop", "Ground Spicy Pork Sausage", 
@@ -16,17 +16,17 @@ document.addEventListener('DOMContentLoaded', function () {
             "Pork Tenderloin", "Pork Shoulder Roast", "Ground Meatload Mixture"]
         },
         {
-            "categoryName": "Fish",
+            "categoryName": "FISH",
             "items": ["Baby Octopus", "White Fish Fillet", "Fish Fillet", "White Fish", "Fish", "Mussel", 
             "Calamari", "Tilapia Fillet", "Milkfish", "Canned Tomato Sauce Sardines", "Shrimp", "Canned Tuna", 
             "Octopus", "Tuna", "Prawn", "Squid"]
         },
         {
-            "categoryName": "Eggs",
+            "categoryName": "EGGS",
             "items": ["Chicken Egg", "Salted Egg"]
         },
         {
-            "categoryName": "Vegetables",
+            "categoryName": "VEGETABLES",
             "items": ["Green Onion", "Green Leafy Vegetables", "Stew Vegetables", "Zucchini", "Red Capsicum", 
             "Tater Tots", "Green Beans", "Squash", "Carrot", "Portobello Mushrooms", "Peas", "Eggplant", 
             "Bell Pepper", "Butternut Pumpkin", "Potato", "Corn", "Broccoli", "Mixed Veggies", "String Beans", 
@@ -35,32 +35,32 @@ document.addEventListener('DOMContentLoaded', function () {
             "Stir-fried Vegetables", "Russet Potato", "Romaine Lettuce", "Ginger", "Calamansi Juice"]
         },
         {
-            "categoryName": "Fruits",
+            "categoryName": "FRUITS",
             "items": ["Apple", "Seedless Watermelon", "Lime Juice", "Lemon", "Banana", "Avocado", "Lemon Juice", 
             "Frozen Orange Juice", "Grape Tomatoes", "Sun-dried Tomatoes", "Navel Orange", "Lemon Wedges", "Peaches", 
             "Pineapple"]
         },
         {
-            "categoryName":"Dairy or Dairy Alternatives",
+            "categoryName":"DAIRY or DAIRY ALTERNATIVES",
             "items": ["Coconut Milk", "Mozarella Cheese", "Cream Cheese", "Parmesan Cheese", "Cheddar Cheese", 
             "Cheese", "Green Yogurt", "Strawberry Yogurt", "Blue Cheese Salad Dressing", "Pecan Ice Cream", 
             "Mexican Cheese Blend", "Swiss Cheese", "Pepper Jack Cheese", "Smoked Gouda Cheese", "Provolone Cheese", 
             "Evaporated Milk"]
         },
         {
-            "categoryName": "Grains",
+            "categoryName": "GRAINS",
             "items": ["Chicken Stuffing Mix", "Crackers", "Ramen Noodles", "Cheese Ravioli", "Shell Pasta", 
             "Rice Pilaf Mix with Toasted Almonds", "Canned Biscuits", "Flour", "Bread", "Pasta", "Egg Noodles", 
             "Grands Biscuit", "Fruity Pebbles Cereal", "Self-rising Flour", "Crescent Roll", "Tortilla", 
             "Naan Flatbread", "Rice", "Tostada Shells", "Wheat Hamburger Buns", "Pretzel Rolls", "Hoagie Rolls"]
         },
         {
-            "categoryName": "Beverages",
+            "categoryName": "BEVERAGES",
             "items": ["Cola", "Dr. Pepper", "Low Sodium Vegetable Juice", "Tomato Juice", "Beer", "White Wine",
             "Non-alcoholic Beer", "Water", "V8 Juice", "Sake", "Bourbon"]
         },
         {
-            "categoryName": "Sauces and Condiments",
+            "categoryName": "SAUCES and CONDIMENTS",
             "items": ["Caesar Salad Dressing", "Worcestershire Sauce", "Cider Vinegar", "Taco Sauce", 
             "Sweet Chili Sauce", "Sweet Pickled Relish", "Soy Sauce", "Spaghetti Sauce", "Bread Crumbs", 
             "Vegatable Stock", "Pesto Sauce", "Italian Salad Dressing", "Asian Sesame Salad Dressing", 
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "Hoisin Sauce", "Sriracha Chili Sauce", "Mango Chutney"]
         },
         {
-            "categoryName": "Herbs and Spices",
+            "categoryName": "HERBS and SPICES",
             "items": ["Ground Ginger", "Hot Pepper Sauce", "Dijon Mustard", "Savory Pot Roast Seasoning Mix", 
             "Sea Salt", "Mint", "Parsley", "French Onion Packet", "Ranch Seasoning", "Italian Dressing Mix", 
             "Ranch Salad Dressing Mix", "Thyme", "Black Pepper", "Onion Soup Mix", "Salt", "Kosher Salt", 
@@ -80,31 +80,31 @@ document.addEventListener('DOMContentLoaded', function () {
             "Onion Seasoning", "Garlic Paste"]
         },
         {
-            "categoryName": "Soup",
+            "categoryName": "SOUP",
             "items": ["Cream of Condensed Broccoli Cheese Soup", "Golden Mushroom Soup", "Bone Broth", 
             "Tomato Soup", "Cream of Condensed Mushroom Soup", "Cream of Condensed Chicken Soup", "Chicken Broth", 
             "Beef Broth", "Tomato Rice Soup", "Onion Soup", "Mushroom Soup"]
         },
         {
-            "categoryName": "Legumes",
+            "categoryName": "LEGUMES",
             "items": ["Great Northern Beans", "Black Beans", "Kidney Beans", "Miso Paste", "Canned Chili with Beans", 
             "Refried Beans", "White Beans"]
         },
         {
-            "categoryName": "Nuts and Seeds",
+            "categoryName": "NUTS and SEEDS",
             "items": ["Unsalted Dry Roasted Peanut", "Sesame Seeds", "Pine Nuts", "Sunflower Seeds", "Almonds"]
         },
         {
-            "categoryName": "Tofu and Tempeh",
+            "categoryName": "TOFU and TEMPEH",
             "items": ["Tofu"]
         },
         {
-            "categoryName": "Sweets and Sugars",
+            "categoryName": "SWEETS and SUGARS",
             "items": ["Red Jalapeno Pepper Jelly", "Apricot Preserve", "Grape Jelly", "Maple Syrup", 
             "Sugar", "Honey", "Brown Sugar", "Agave Nectar"]
         },
         {
-            "categoryName": "Fats and Oils",
+            "categoryName": "FATS and OILS",
             "items": ["Coconut Oil", "Sesame Oil", "Canola Oil", "Cooking Oil", "Olive Oil", "Mayonnaise", 
             "Cooking Spray", "Butter", "French-fried Onion"]
         }
