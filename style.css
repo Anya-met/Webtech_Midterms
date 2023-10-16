@@ -46,6 +46,12 @@ nav ul li:not(.selected-header-button):hover {
     background-color: #99e1e0;
 }
 
+.finder-button {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+}
+
 .header-button {
     color: #000000;
     font-family: "Glacial Indifference";
@@ -182,7 +188,10 @@ main {
 }
 
 .category {
-    font-family: "Glacial Indifference";
+    font-family: "Copperplate", fantasy;
+    font-weight: 500;
+    font-size: 50px;
+    color: whitesmoke;
 }
 
 .category-container {
