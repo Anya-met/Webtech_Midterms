@@ -1,309 +1,843 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-
-*{
-    padding: 0;
+body, ul {
     margin: 0;
-    box-sizing: border-box;
-}
-:root{
-    --tenne-tawny: #d65108;
-    --tenne-tawny-dark: #b54507;
-}
-body{
-    font-weight: 300;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    font-family: 'Poppins', sans-serif;
+    padding: 0;
 }
 
-/*  */
-.btn{
-    font-family: inherit;
+body {
+    background: url(Images/bg.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+header {
+    align-items: center;
+    background-color: #E1B264;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+header img {
+    width: 75px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
     cursor: pointer;
-    outline: 0;
-    font-size: 1.05rem;
-}
-.text{
-    opacity: 0.8;
-}
-.title{
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-left: 30px;
+    margin-right: 20px;
+    padding: 10px 30px;
 }
 
-/*  */
-.container{
-    min-height: 100vh;
+nav ul li:not(.selected-header-button):hover {
+    background-color: #BFE199;
 }
-.meal-wrapper{
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: #fff;
+
+.header-button {
+    color: #000000;
+    font-family: "Glacial Indifference";
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.selected-header-button {
+    background-color: #A1C876;
+}
+
+footer {
+    background-color: #E1B264;
+    height: 50px;
+    padding: 10px;
+    z-index: 10;
+}
+
+/* -- */
+
+main {
+    position: relative;
+}
+
+.main-index {
+    background-color: rgba(255, 255, 255, 50%);
+    border-radius: 60px;
+    box-sizing: border-box;
+    float: left;
+    height: 800px;
+    margin: 120px 20px 0px 20px;
+    max-width: 1260px; 
+    padding: 20px;
+    width: 100%;
+}
+
+
+#ill-cook {
+    margin: -25px;
+    width: 100%;
+}
+
+#first-line {
+    color: #833f3f;
+    font-family: "Allura";
+    font-size: 50px;
+    margin: -40px;
     text-align: center;
 }
-.meal-search{
-    margin: 2rem 0;
+
+#second-line {
+    color: #833f3f;
+    font-family: "Allura";
+    font-size: 50px;
+    text-align: center;
 }
-.meal-search cite{
-    font-size: 1rem;
+
+#finder-container {
+    display: grid;
+    height: 100vh;
+    place-items: center;
 }
-.meal-search-box{
-    margin: 1.2rem 0;
-    display: flex;
-    align-items: stretch;
-}
-.search-control,
-.search-btn{
-    width: 100%;
-}
-.search-control{
-    padding: 0 1rem;
-    font-size: 1.1rem;
-    font-family: inherit;
-    outline: 0;
-    border: 1px solid var(--tenne-tawny);
-    color: var(--tenne-tawny);
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-}
-.search-control::placeholder{
-    color: var(--tenne-tawny);
-}
-.search-btn{
-    width: 55px;
-    height: 55px;
-    font-size: 1.8rem;
-    background: var(--tenne-tawny);
-    color: #fff;
-    border: none;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    transition: all 0.4s linear;
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -ms-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
-}
-.search-btn:hover{
-    background: var(--tenne-tawny-dark);
-}
-.meal-result{
-    margin-top: 4rem;
-}
-#meal{
-    margin: 2.4rem 0;
-}
-.meal-item{
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
-    margin: 2rem 0;
-}
-.meal-img img{
-    width: 100%;
-    display: block;
-}
-.meal-name{
-    padding: 1.5rem 0.5rem;
-}
-.meal-name h3{
-    font-size: 1.4rem;
-}
-.recipe-btn{
+
+#finder-button a {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    float: right;
+    font-family: "Glacial Indifference";
+    font-size: 30px;
+    margin-right: 70px;
+    margin-top: 500px;
+    padding: 10px 40px;
     text-decoration: none;
-    color: #fff;
-    background: var(--tenne-tawny);
-    font-weight: 500;
-    font-size: 1.1rem;
-    padding: 0.75rem 0;
-    display: block;
-    width: 175px;
-    margin: 1rem auto;
-    border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
-    transition: all 0.4s linear;
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -ms-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
-}
-.recipe-btn:hover{
-    background: var(--tenne-tawny-dark);
-}
-
-/* meal details */
-.meal-details{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    color: #fff;
-    background: var(--tenne-tawny);
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
-    width: 90%;
-    height: 90%;
-    overflow-y: scroll;
-    display: none;
-    padding: 2rem 0;
-}
-.meal-details::-webkit-scrollbar{
-    width: 10px;
-}
-.meal-details::-webkit-scrollbar-thumb{
-    background: #f0f0f0;
-    border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
 }
 
 
-/* js related */
-.showRecipe{
-    display: block;
-}
-
-.meal-details-content{
-    margin: 2rem;
-}
-.meal-details-content p:not(.recipe-category){
-    padding: 1rem 0;
-}
-.recipe-close-btn{
-    position: absolute;
-    right: 2rem;
-    top: 2rem;
-    font-size: 1.8rem;
-    background: #fff;
-    border: none;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.9;
-}
-.recipe-title{
-    letter-spacing: 1px;
-    padding-bottom: 1rem;
-}
-.recipe-category{
-    background: #fff;
-    font-weight: 600;
-    color: var(--tenne-tawny);
-    display: inline-block;
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.3rem;
-    -webkit-border-radius: 0.3rem;
-    -moz-border-radius: 0.3rem;
-    -ms-border-radius: 0.3rem;
-    -o-border-radius: 0.3rem;
-}
-.recipe-category{
-    background: #fff;
-    font-weight: 600;
-    color: var(--tenne-tawny);
-    display: inline-block;
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.3rem;
-    -webkit-border-radius: 0.3rem;
-    -moz-border-radius: 0.3rem;
-    -ms-border-radius: 0.3rem;
-    -o-border-radius: 0.3rem;
-}
-.recipe-instruct{
-    padding: 1rem 0;
-}
-.recipe-meal-img img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-}
-.recipe-link{
-    margin: 1.4rem 0;
-}
-.recipe-link a{
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 700;
-    transition: all 0.4s linear;
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -ms-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
-}
-.recipe-link a:hover{
-    opacity: 0.8;
-}
-
-
-/*  */
-.notFound{
-    grid-template-columns: 1fr!important;
-    color: var(--tenne-tawny);
-    font-size: 1.8rem;
-    font-weight: 600;
+#finder-container a {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    font-family: "Glacial Indifference";
+    font-size: 30px;
+    max-width: none;
+    padding: 10px 40px;
+    text-decoration: none;
     width: 100%;
 }
 
-
-
-
-
-
-/* Media Queries */
-@media screen and (min-width: 600px){
-    .meal-search-box{
-        width: 540px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+#finder-container a:hover {
+    background-color: #A1C876;
 }
 
-@media screen and (min-width: 768px){
-    #meal{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-    .meal-item{
-        margin: 0;
-    }
-    .meal-details{
-        width: 700px;
-    }
+/* -- */
+
+.block {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
 }
 
-@media screen and (min-width: 992px){
-    #meal{
-        grid-template-columns: repeat(3, 1fr);
+.content-block {
+    background-color: white;
+    display: inline-block;
+    margin: 20px;
+    padding: 0px 20px;
+    text-align: center;
+    width: 1000px;
+    z-index: 7;
+}
+
+.content-block h2 {
+    text-align: left;
+    
+}
+
+.category {
+    font-family: "Glacial Indifference";
+}
+
+.category-container {
+    display: inline-block;
+    padding-bottom: 20px;
+    width: 100%; 
+}
+
+.ingredient {
+    border: 1px rgb(165, 165, 165) solid;
+    border-radius: 10px;
+    float: left;
+    font-family: "Glacial Indifference";
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.ingredient:hover {
+    background-color: #BFE199;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.buttons {
+    right: 0;
+    position: fixed;
+    top: 120px;
+    width: 270px;
+    margin-right: 50px;
+}
+
+.clear-all, .find-recipe {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Glacial Indifference";
+    font-size: 25px;
+    margin-bottom: 35px;
+    padding: 10px 40px;
+    text-align: center;
+}
+
+#find {
+    color: black;
+    text-decoration: none;
+}
+
+.clear-all:hover {
+    background-color: #e19999;
+}
+
+.find-recipe:hover {
+    background-color: #A1C876;
+}
+
+/* -- */
+
+#back {
+    color: #52722e;
+    font-family: "Glacial Indifference";
+    font-size: 20px;
+    font-weight: bolder;
+    left: 0;
+    margin-left: 30px;
+    margin-top: 50px;
+    position: fixed;
+    text-decoration: none;
+}
+
+.chosen {
+    background-color: rgba(255, 255, 255, 0.863);
+    border-radius: 10px;
+    display: inline-block;
+    font-family: "Glacial Indifference";
+    margin: 40px 20px 0px 0px;
+    padding: 0px 20px 20px 20px;
+    position: fixed;
+    right: 0;
+    width: 300px;
+}
+
+.chosen-ingr {
+    background-color: #BFE199;
+    border: 1px rgb(165, 165, 165) solid;
+    border-radius: 10px;
+    float: left;
+    font-size: 15px;
+    margin: 0px 10px 10px 10px;
+    padding: 10px 20px;
+}
+
+.recipe-block {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    z-index: 7;
+}
+
+.recipe {
+    background-color: rgba(255, 255, 255, 0.747);
+    border-radius: 10px;
+    display: flex;
+    margin: 20px 0px;
+    padding: 20px;
+    width: 1000px;
+}
+
+#recipe-pic {
+    border: dashed 2px #678149;
+    border-radius: 50%;
+    float: left;
+    height: 200px;
+    overflow: hidden;
+    width: 200px;
+}
+
+#recipe-pic img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+#recipe-info {
+    float: left;
+    font-family: "Glacial Indifference";
+    margin: 0px 00px 0px 70px;
+    text-align: left;
+}
+
+.reco {
+    background-color: rgba(233, 121, 121, 0.555);
+    border-radius: 10px;
+    margin: 20px 0px;
+    padding: 20px;
+    width: 1000px;
+}
+
+/* -- */
+
+.category-block {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+}
+
+#search-box {
+    font-family: "Glacial Indifference";
+    font-size: 20px;
+    height: 40px;
+    margin-top: 20px;
+    padding: 0px 10px 0px 10px;
+    width: 600px;
+}
+
+#search {
+    font-family: "Glacial Indifference";
+    font-size: 20px;
+    height: 40px;
+    margin-top: 20px;
+    padding: 0px 10px 0px 10px;
+    width: 100px;
+}
+
+.categ {
+    margin: 20px;
+    text-align: center;
+    z-index: 7;
+}
+
+.category-desc1, .category-desc2 {
+    background-color: rgb(247, 238, 225);
+    border-radius: 10px;
+    font-family: "Glacial Indifference";
+    font-size: 20px;
+    margin: 20px 0px;
+    padding: 20px;
+    position: relative;
+    text-align: left;
+    width: 1000px;
+}
+
+.category-desc1 h1, .category-desc2 h1 {
+    font-family: "Allura";
+    font-size: 60px;
+    text-align: center;
+}
+
+.category-desc1::before, .category-desc2::before {
+    background: url('Images/Categories/Beverages.jpg') center/cover no-repeat;
+    border-radius: 10px;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    opacity: 0.2;
+    top: 0;
+    width: 100%;
+}
+
+.category-desc2::before {
+    background: url('Images/Categories/Dairy.jpg') center/cover;
+}
+
+/*Floating clear button*/
+.floating-button {
+    position: fixed;
+    bottom: 50px; 
+    left: 150px; 
+    background-color: lightblue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.floating-button:hover {
+    background-color: #0078d4; 
+}
+
+#menu-icon {
+    display: none;
+}
+
+nav#mobile-menu {
+    display: none; /* Hide the mobile menu in the mobile view */
+}
+
+/*about us page*/
+.about-header {
+    background-image: url("Images/About/ingredients-pic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    height: 300px;
+}
+
+.about-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.about-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text p {
+    font-family: "Glacial Indifference";
+    font-size: 25px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2; 
+}
+
+.tagline {
+    font-family: "Allura";
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.home-button {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: "Glacial Indifference";
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+
+.home-button:hover {
+    background-color: #A1C876;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-right: 20px;
+    padding: 10px 30px;
+}
+
+.about-header img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    position: relative;
+}
+
+.main-about {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 60px;
+    box-sizing: border-box;
+    margin: 20px 20px 0px 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1080px; 
+    margin: 0 auto; 
+
+}
+
+main h1 {
+    font-family: "Allura";
+    font-size: 80px;
+    color: #833f3f;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-family: "Glacial Indifference";
+    font-size: 18px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.contact-section {
+    max-width: 1080px;
+    margin: 0 auto;
+    border-radius: 60px;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-top: 20px;
+    font-family: "Glacial Indifference";    
+}
+
+.contact-section h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 20px;
+    color: #555;
+}
+
+.contact-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-section li {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-section label {
+    font-size: 18px;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-section input[type="email"],
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    background-color: #4286f4;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+     background-color: #A1C876;
+}
+
+@font-face {
+    font-family: "Allura";
+    src: url(Fonts/Allura-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Glacial Indifference";
+    src: url(Fonts/GlacialIndifference-Regular.otf);
+
+  }  
+  
+  /*mobile view*/
+  @media (max-width: 768px) {
+        .main-index {
+            margin: 20px;
+        }
+       
+    body {  
+        background-size: auto;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+     nav ul li {
+        display: none;
+    }
+
+    nav ul li {
+        background-color: white;
+        border: 1px solid;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 10px;
+    }
+
+    header img {
+        width: 50px;
+    }
+
+    
+    #menu-icon {
+        position: fixed;
+        top: 20px;
+        left: 15px;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        display: block;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .main-index {
+        border-radius: 10px;
+        margin: 20px;
+        padding: 10px;
+        width: auto;
+        height: 450px;
+    }
+
+    #first-line, #second-line {
+        font-size: 20px;
+        margin: 0px auto;
+    }
+
+    #ill-cook {
+        margin: 0px;
+        margin-top: 80px;
+        margin-bottom: 35px;
+    }
+
+    #finder-button a {
+        font-size: 15px;
+        margin: 20px auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .block {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .content-block {
+        margin: 10px;
+        margin-top: 80px;
+        padding: 10px;
+        width: auto;
+        text-align: left; 
+
+        text-align: center; /*  center text horizontally */
+        background-color: white;
+        display: inline-block;
+        margin: 20px;
+        padding: 0px 20px;
+        width: 1000px;
+        z-index: 7;
+    }
+
+    .content-block h2 {
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .buttons {
+        left: 10px;
+        margin: 10px 0;
+        top: auto;
+        position: static;
+        width: auto;
+    }
+
+    .category-container {
+        width: auto;
+    }
+
+    .ingredient {
+        font-size: 12px;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .floating-button {
+        left: 10px;
+    }
+
+    .floating-button:hover {
+        background-color: #0078d4;
+    }
+
+    .buttons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .clear-all, .find-recipe {
+        font-size: 15px;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 10px 20px;
+        text-align: center;
+        width: auto;
+    }
+
+    .header-button {
+        font-size: 15px;
+    }
+
+    .about-header {
+        height: 200px; 
+    }
+
+    .tagline {
+        font-size: 24px; 
+        margin: 10px 0;
+    }
+
+    .about-content {
+        flex-direction: column; 
+        position: relative;
+        width: auto;
+    }
+
+    .about-image {
+        flex: 1;
+        padding: 20px;
+        text-align: center; 
+    }
+
+    .about-image img {
+        max-width: 20%;
+        height: auto;
+    }
+
+    .about-text {
+        flex: 2;
+        text-align: center; 
+    }
+
+    .about-text p {
+        font-size: 16px; 
+        margin-bottom: 10px; 
+    }
+
+    .main-about h1 {
+        margin-top: 20px;
+        margin: 0px; 
+    }
+    
+    .home-button {
+        margin-top: 10px; 
+    }
+
+    /*Mobile view for category page*/
+    .category-block {
+        width: 100%;
+    }
+
+    #search-box {
+        margin-top: 80px;
+        width: 100%;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    .category-desc1, .category-desc2 {
+        margin: 20px auto;
+        width: auto;
+    }
+
+    .category-desc1 h1, .category-desc2 h1 {
+        font-size: 40px;
     }
 }
