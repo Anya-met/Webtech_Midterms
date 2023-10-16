@@ -5,60 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const data = {
     "foodCategories": [
         {
-            "categoryName": "Beverages",
-            "items": ["Cola", "Dr. Pepper", "Low Sodium Vegetable Juice", "Tomato Juice", "Beer", "White Wine",
-            "Non-alcoholic Beer", "Water", "V8 Juice", "Sake", "Bourbon"]
-        },
-        {
-            "categoryName": "Dairy or Dairy Alternatives",
-            "items": ["Coconut Milk", "Mozarella Cheese", "Cream Cheese", "Parmesan Cheese", "Cheddar Cheese", 
-            "Cheese", "Green Yogurt", "Strawberry Yogurt", "Blue Cheese Salad Dressing", "Pecan Ice Cream", 
-            "Mexican Cheese Blend", "Swiss Cheese", "Pepper Jack Cheese", "Smoked Gouda Cheese", "Provolone Cheese", 
-            "Evaporated Milk"]
-        },
-        {
-            "categoryName": "Eggs",
-            "items": ["Chicken Egg", "Salted Egg"]
-        },
-        {
-            "categoryName": "Fats and Oils",
-            "items": ["Coconut Oil", "Sesame Oil", "Canola Oil", "Cooking Oil", "Olive Oil", "Mayonnaise", 
-            "Cooking Spray", "Butter", "French-fried Onion"]
-        },
-        {
-            "categoryName": "Fish",
-            "items": ["Baby Octopus", "White Fish Fillet", "Fish Fillet", "White Fish", "Fish", "Mussel", 
-            "Calamari", "Tilapia Fillet", "Milkfish", "Canned Tomato Sauce Sardines", "Shrimp", "Canned Tuna", 
-            "Octopus", "Tuna", "Prawn", "Squid"]
-        },
-        {
-            "categoryName": "Fruits",
-            "items": ["Apple", "Seedless Watermelon", "Lime Juice", "Lemon", "Banana", "Avocado", "Lemon Juice", 
-            "Frozen Orange Juice", "Grape Tomatoes", "Sun-dried Tomatoes", "Navel Orange", "Lemon Wedges", "Peaches", 
-            "Pineapple"]
-        },
-        {
-            "categoryName": "Grains",
-            "items": ["Chicken Stuffing Mix", "Crackers", "Ramen Noodles", "Cheese Ravioli", "Shell Pasta", 
-            "Rice Pilaf Mix with Toasted Almonds", "Canned Biscuits", "Flour", "Bread", "Pasta", "Egg Noodles", 
-            "Grands Biscuit", "Fruity Pebbles Cereal", "Self-rising Flour", "Crescent Roll", "Tortilla", 
-            "Naan Flatbread", "Rice", "Tostada Shells", "Wheat Hamburger Buns", "Pretzel Rolls", "Hoagie Rolls"]
-        },
-        {
-            "categoryName": "Herbs and Spices",
-            "items": ["Ground Ginger", "Hot Pepper Sauce", "Dijon Mustard", "Savory Pot Roast Seasoning Mix", 
-            "Sea Salt", "Mint", "Parsley", "French Onion Packet", "Ranch Seasoning", "Italian Dressing Mix", 
-            "Ranch Salad Dressing Mix", "Thyme", "Black Pepper", "Onion Soup Mix", "Salt", "Kosher Salt", 
-            "Taco Seasoning Mix", "Tanoori Chicken Masala", "Garlic", "Southwest-style Seasoning Blend", 
-            "Cornstarch", "Green Chili", "Sage", "Rosemary Sprigs", "Chili Powder", "Smoked Paprika", 
-            "Onion Seasoning", "Garlic Paste"]
-        },
-        {
-            "categoryName": "Legumes",
-            "items": ["Great Northern Beans", "Black Beans", "Kidney Beans", "Miso Paste", "Canned Chili with Beans", 
-            "Refried Beans", "White Beans"]
-        },
-        {
             "categoryName": "Meat",
             "items": ["Chicken Drumstick", "Cooked Chicken", "Pork Leg", "Pork Loin", "Bulk Pork Sausage", 
             "Round Beef Roast", "Beef Rump Roast", "Organic Beef", "Sausage Ravioli", "Beef Stir-fry Strips", 
@@ -70,8 +16,48 @@ document.addEventListener('DOMContentLoaded', function () {
             "Pork Tenderloin", "Pork Shoulder Roast", "Ground Meatload Mixture"]
         },
         {
-            "categoryName": "Nuts and Seeds",
-            "items": ["Unsalted Dry Roasted Peanut", "Sesame Seeds", "Pine Nuts", "Sunflower Seeds", "Almonds"]
+            "categoryName": "Fish",
+            "items": ["Baby Octopus", "White Fish Fillet", "Fish Fillet", "White Fish", "Fish", "Mussel", 
+            "Calamari", "Tilapia Fillet", "Milkfish", "Canned Tomato Sauce Sardines", "Shrimp", "Canned Tuna", 
+            "Octopus", "Tuna", "Prawn", "Squid"]
+        },
+        {
+            "categoryName": "Eggs",
+            "items": ["Chicken Egg", "Salted Egg"]
+        },
+        {
+            "categoryName": "Vegetables",
+            "items": ["Green Onion", "Green Leafy Vegetables", "Stew Vegetables", "Zucchini", "Red Capsicum", 
+            "Tater Tots", "Green Beans", "Squash", "Carrot", "Portobello Mushrooms", "Peas", "Eggplant", 
+            "Bell Pepper", "Butternut Pumpkin", "Potato", "Corn", "Broccoli", "Mixed Veggies", "String Beans", 
+            "Onion", "Sweet Potato", "Cauliflower", "Acorn Squash", "Fajita Vegetables", "Kale", "Baby Spinach", 
+            "Chickpeas", "Brussels Sprout", "Mixed Greens", "Spinach", "Tomato", "Hash Brown", "Mashed Potato",
+            "Stir-fried Vegetables", "Russet Potato", "Romaine Lettuce", "Ginger", "Calamansi Juice"]
+        },
+        {
+            "categoryName": "Fruits",
+            "items": ["Apple", "Seedless Watermelon", "Lime Juice", "Lemon", "Banana", "Avocado", "Lemon Juice", 
+            "Frozen Orange Juice", "Grape Tomatoes", "Sun-dried Tomatoes", "Navel Orange", "Lemon Wedges", "Peaches", 
+            "Pineapple"]
+        },
+        {
+            "categoryName":"Dairy or Dairy Alternatives",
+            "items": ["Coconut Milk", "Mozarella Cheese", "Cream Cheese", "Parmesan Cheese", "Cheddar Cheese", 
+            "Cheese", "Green Yogurt", "Strawberry Yogurt", "Blue Cheese Salad Dressing", "Pecan Ice Cream", 
+            "Mexican Cheese Blend", "Swiss Cheese", "Pepper Jack Cheese", "Smoked Gouda Cheese", "Provolone Cheese", 
+            "Evaporated Milk"]
+        },
+        {
+            "categoryName": "Grains",
+            "items": ["Chicken Stuffing Mix", "Crackers", "Ramen Noodles", "Cheese Ravioli", "Shell Pasta", 
+            "Rice Pilaf Mix with Toasted Almonds", "Canned Biscuits", "Flour", "Bread", "Pasta", "Egg Noodles", 
+            "Grands Biscuit", "Fruity Pebbles Cereal", "Self-rising Flour", "Crescent Roll", "Tortilla", 
+            "Naan Flatbread", "Rice", "Tostada Shells", "Wheat Hamburger Buns", "Pretzel Rolls", "Hoagie Rolls"]
+        },
+        {
+            "categoryName": "Beverages",
+            "items": ["Cola", "Dr. Pepper", "Low Sodium Vegetable Juice", "Tomato Juice", "Beer", "White Wine",
+            "Non-alcoholic Beer", "Water", "V8 Juice", "Sake", "Bourbon"]
         },
         {
             "categoryName": "Sauces and Condiments",
@@ -85,10 +71,32 @@ document.addEventListener('DOMContentLoaded', function () {
             "Hoisin Sauce", "Sriracha Chili Sauce", "Mango Chutney"]
         },
         {
+            "categoryName": "Herbs and Spices",
+            "items": ["Ground Ginger", "Hot Pepper Sauce", "Dijon Mustard", "Savory Pot Roast Seasoning Mix", 
+            "Sea Salt", "Mint", "Parsley", "French Onion Packet", "Ranch Seasoning", "Italian Dressing Mix", 
+            "Ranch Salad Dressing Mix", "Thyme", "Black Pepper", "Onion Soup Mix", "Salt", "Kosher Salt", 
+            "Taco Seasoning Mix", "Tanoori Chicken Masala", "Garlic", "Southwest-style Seasoning Blend", 
+            "Cornstarch", "Green Chili", "Sage", "Rosemary Sprigs", "Chili Powder", "Smoked Paprika", 
+            "Onion Seasoning", "Garlic Paste"]
+        },
+        {
             "categoryName": "Soup",
             "items": ["Cream of Condensed Broccoli Cheese Soup", "Golden Mushroom Soup", "Bone Broth", 
             "Tomato Soup", "Cream of Condensed Mushroom Soup", "Cream of Condensed Chicken Soup", "Chicken Broth", 
             "Beef Broth", "Tomato Rice Soup", "Onion Soup", "Mushroom Soup"]
+        },
+        {
+            "categoryName": "Legumes",
+            "items": ["Great Northern Beans", "Black Beans", "Kidney Beans", "Miso Paste", "Canned Chili with Beans", 
+            "Refried Beans", "White Beans"]
+        },
+        {
+            "categoryName": "Nuts and Seeds",
+            "items": ["Unsalted Dry Roasted Peanut", "Sesame Seeds", "Pine Nuts", "Sunflower Seeds", "Almonds"]
+        },
+        {
+            "categoryName": "Tofu and Tempeh",
+            "items": ["Tofu"]
         },
         {
             "categoryName": "Sweets and Sugars",
@@ -96,17 +104,9 @@ document.addEventListener('DOMContentLoaded', function () {
             "Sugar", "Honey", "Brown Sugar", "Agave Nectar"]
         },
         {
-            "categoryName": "Tofu and Tempeh",
-            "items": ["Tofu"]
-        },
-        {
-            "categoryName": "Vegetables",
-            "items": ["Green Onion", "Green Leafy Vegetables", "Stew Vegetables", "Zucchini", "Red Capsicum", 
-            "Tater Tots", "Green Beans", "Squash", "Carrot", "Portobello Mushrooms", "Peas", "Eggplant", 
-            "Bell Pepper", "Butternut Pumpkin", "Potato", "Corn", "Broccoli", "Mixed Veggies", "String Beans", 
-            "Onion", "Sweet Potato", "Cauliflower", "Acorn Squash", "Fajita Vegetables", "Kale", "Baby Spinach", 
-            "Chickpeas", "Brussels Sprout", "Mixed Greens", "Spinach", "Tomato", "Hash Brown", "Mashed Potato",
-            "Stir-fried Vegetables", "Russet Potato", "Romaine Lettuce", "Ginger", "Calamansi Juice"]
+            "categoryName": "Fats and Oils",
+            "items": ["Coconut Oil", "Sesame Oil", "Canola Oil", "Cooking Oil", "Olive Oil", "Mayonnaise", 
+            "Cooking Spray", "Butter", "French-fried Onion"]
         }
     ],
 
