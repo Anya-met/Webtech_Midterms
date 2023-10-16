@@ -83,8 +83,8 @@ main {
     box-sizing: border-box;
     float: left;
     height: 800px;
-    margin: 120px 20px 0px 20px;
-    max-width: 1000px; 
+    margin: 120px 20px 20px 20px;
+    max-width: 1260px; 
     padding: 20px;
     width: 100%;
 }
@@ -101,7 +101,7 @@ main {
     font-size: 50px;
     margin: -40px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: -15px;
 }
 
 #second-line {
@@ -113,9 +113,10 @@ main {
 #third-line{
     color: #833f3f;
     font-family:'Times New Roman', Times, serif;
-    font-size: 40px;
-    margin-left: 350px;
+    font-size: 50px;
+    margin-left: 600px;
     margin-bottom: -150px;
+    margin-right: 50px;
 }
 #LutoniIdol{
     margin-top: 20px;
@@ -698,7 +699,7 @@ main p {
     }
 
     .main-index {
-        border-radius: 10px;
+        border-radius: 0px;
         margin: 20px;
         padding: 10px;
         width: auto;
