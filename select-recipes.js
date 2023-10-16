@@ -1004,7 +1004,7 @@ document.addEventListener('DOMContentLoaded', function () {
 ],
 };
 
-if (currentPathname.endsWith('recipe-finder.html')) {
+if (currentPathname.endsWith('finder.html')) {
   function createCategoryContainers(data) {
     const contentBlock = document.querySelector('.content-block');
   
@@ -1218,14 +1218,14 @@ if (currentPathname.endsWith('recipe-finder.html')) {
 
   
 
-  if (currentPathname.endsWith('recipe-finder-a.html')) {
+  if (currentPathname.endsWith('finder1.html')) {
     const urlParams = new URLSearchParams(window.location.search);
     const findParam = urlParams.get('find');
     if (findParam === "true") {
-      console.log("findParam is true in recipe-finder-a.html. Running displayRecipes()");
+      console.log("findParam is true in finder1.html. Running displayRecipes()");
       displayRecipes();
     } else {
-      console.log("findParam is not true in recipe-finder-a.html. Not running displayRecipes()");
+      console.log("findParam is not true in finder1.html. Not running displayRecipes()");
     }
   }
 
