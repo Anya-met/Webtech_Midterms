@@ -31,6 +31,20 @@
                 <div class="clear-all">
                     Clear All
                 </div>
+                <script>
+                    function clearAllIngredients(){
+                        const ingredientButtons = document.querySelectorAll('.ingredient');
+                        
+                        
+                        ingridientButtons.forEach(button => {
+                        button.classList.remove('selected');
+                    });
+
+                    }
+
+                    const clearAllButton = document.getElementById('clear-all');
+                    clearAllButton.addEventListener('click', clearAllIngredients);
+                </script>
 
                 <div class="find-recipe">
                     <a href="finder1.html?find=true" id="find">Look for Recipes</a>
