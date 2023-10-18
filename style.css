@@ -254,36 +254,27 @@ main {
 /* -- */
 
 #back {
-    color: rgb(8, 0, 0);
+    color: rgb(0, 0, 0);
     font-family: "Glacial Indifference";
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bolder;
     left: 0;
     margin-left: 30px;
     position: fixed;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+#back:hover {
+    color: rgb(163, 59, 59);
 }
 
 .chosen {
-    background-color: rgba(255, 255, 255, 0.863);
-    border-radius: 10px;
-    display: inline-block;
-    font-family: "Glacial Indifference";
-    margin: 40px 20px 0px 0px;
-    padding: 0px 20px 20px 20px;
-    position: fixed;
-    right: 0;
-    width: 300px;
+    display: none;
 }
 
 .chosen-ingr {
-    background-color: #BFE199;
-    border: 1px rgb(165, 165, 165) solid;
-    border-radius: 10px;
-    float: left;
-    font-size: 15px;
-    margin: 0px 10px 10px 10px;
-    padding: 10px 20px;
+    display: none;
 }
 
 .recipe-block {
@@ -687,7 +678,7 @@ main {
 main h1 {
     font-family: "Allura";
     font-size: 80px;
-    color: #833f3f;
+    color: #301717;
     text-align: center;
     margin-bottom: 10px;
 }
