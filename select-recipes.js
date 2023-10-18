@@ -1243,3 +1243,80 @@ if (currentPathname.endsWith('finder.html')) {
     });
 
   });
+
+  //clear-all button
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const currentPathname = window.location.pathname;
+    const selectedIngredients = [];
+  
+    function createCategoryContainers(data) {
+      const contentBlock = document.querySelector('.content-block');
+  
+      data.foodCategories.forEach(category => {
+        const categoryContainer = document.createElement('div');
+        categoryContainer.classList.add('category-container');
+  
+        const categoryHeading = document.createElement('h2');
+        categoryHeading.classList.add('category');
+        categoryHeading.textContent = category.categoryName;
+  
+        categoryContainer.appendChild(categoryHeading);
+  
+        const line = document.createElement('hr');
+        categoryContainer.appendChild(line);
+  
+        category.items.forEach(ingredientName => {
+          const ingredientButton = document.createElement('button');
+          ingredientButton.classList.add('ingredient');
+          ingredientButton.textContent = ingredientName;
+          ingredientButton.addEventListener('click', function () {
+            toggleIngredientSelection(this);
+          });
+  
+          categoryContainer.appendChild(ingredientButton);
+        });
+  
+        contentBlock.appendChild(categoryContainer);
+      });
+      
+      setupEventListeners();
+    }
+  
+    createCategoryContainers(data);
+  
+    function toggleIngredientSelection(button) {
+      const ingredient = button.textContent;
+  
+      if (selectedIngredients.includes(ingredient)) {
+        selectedIngredients.splice(selectedIngredients.indexOf(ingredient), 1);
+        button.classList.remove('selected');
+        button.style.backgroundColor = '';
+        button.style.color = 'black';
+      } else {
+        selectedIngredients.push(ingredient);
+        button.classList.add('selected');
+        button.style.backgroundColor = '#BFE199';
+        button.style.color = 'white';
+      }
+    }
+  
+    function clearAllIngredients() {
+      const ingredientButtons = document.querySelectorAll('.ingredient');
+  
+      ingredientButtons.forEach(button => {
+        button.classList.remove('selected');
+        button.style.backgroundColor = '';
+        button.style.color = 'black';
+      });
+  
+      selectedIngredients.length = 0;
+    }
+  
+    const clearAllButton = document.querySelector('.clear-all');
+    clearAllButton.addEventListener('click', clearAllIngredients);
+  
+
+  });
+  
