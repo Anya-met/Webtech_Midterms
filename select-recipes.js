@@ -1097,27 +1097,8 @@ if (currentPathname.endsWith('finder.html')) {
       localStorage.setItem('exactMatches', JSON.stringify(exactMatches));
       localStorage.setItem('similarMatches', JSON.stringify(similarMatches));
     }
-  
-    
-    
-  
-    const clearAllButton = document.getElementById('clear-all');
-      const ingredientButtons = document.querySelectorAll('.ingredient');
 
-      clearAllButton.addEventListener('click', function() {
-        // Loop through all ingredient buttons and remove the 'selected' class
-        ingredientButtons.forEach(function(button) {
-          button.classList.remove('selected');
-        });
-      });
 
-      // Add a click event listener to each ingredient button to toggle the 'selected' class
-      ingredientButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-          button.classList.toggle('selected');
-        });
-      });
-  
     const findRecipeButton = document.getElementById('find');
     findRecipeButton.addEventListener('click', function (e) {
         if (selectedIngredients.length === 0) {
@@ -1129,8 +1110,6 @@ if (currentPathname.endsWith('finder.html')) {
         }
     });
 }
-
-
 
   const exactMatches = JSON.parse(localStorage.getItem('exactMatches'));
   const similarMatches = JSON.parse(localStorage.getItem('similarMatches'));
@@ -1146,6 +1125,8 @@ if (currentPathname.endsWith('finder.html')) {
       chosenIngredientsContainer.appendChild(chosenIngredient);
     });
   }
+  
+
   
   function displayRecipes() {
     displaySelectedIngredients();
